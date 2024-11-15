@@ -34,7 +34,7 @@ nav{
 }
 .hero-content {
     max-width: 448px;
-    margin: 23px 128px;
+    margin: 23px auto;
     text-align: center;
 }
 h1{
@@ -79,16 +79,12 @@ button{
     width: 56px;
     margin: 0 auto;
     text-align: -webkit-center;
-    position: absolute;
-    left: 50%;
-    top: -106px;
 }
 .top-of-number {
     width: 1px;
     height: 80px;
     border: 1px solid white;
     border-left-color: #D1D1DF;
-    
 }
 .number {
     width: 56px;
@@ -137,17 +133,24 @@ h2{
 }
 footer{
     position: relative;
-    background-image: url(./assets/desktop/image-footer.jpg);
+    background: url(./assets/desktop/image-footer.jpg);
     background-size: 100% 100%;
+}
+.inner-footer{
+    background-color: rgba(77, 150, 169, 90%);
+    max-width: 1440px;
+    height: 312px;
+}
+.number-sec-2 {
+    width: 56px;
+    margin: 0 auto;
+    text-align: -webkit-center;
+    position: absolute;
+    left: 50%;
+    top: -106px;
 }
 footer .number{
     background-color: white;
-}
-footer h2{
-    color: white;
-}
-footer p{
-    color: white;
 }
 .footer-content {
     max-width: 1120px;
@@ -158,10 +161,12 @@ footer p{
 footer h2{
     margin: 0;
     max-width: 445px;
+    color: white;
 }
 footer p{
     margin: 0 32px;
     max-width: 355px;
+    color: white;
 }
 .footer-content .download{
     background-color: #855FB1;
@@ -172,3 +177,83 @@ footer p{
     color: #D9B8FF;
 }
 
+
+@media screen and (max-width: 768px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    nav{
+        margin-top: 48px;
+    }
+    .hero{
+        display: grid;
+        height: 100%;
+        margin-bottom: 0;
+    }
+    .hero-content{
+        grid-column: span 2;
+        order: 3;
+        margin: 72px auto 64px;
+    }
+    .icon-right{
+        order: 2;
+        margin-top: 0;
+        margin-left: 32px;
+    }
+    .icons-left{
+        order: 1;
+    }
+    .hero-content h1{
+        font-size: 48px;
+    }
+    .hero-content p {
+        margin: 24px 0;
+    }
+    .main-images img {
+        max-width: 152px;
+        height: 160px;
+    }
+    .main-images {
+        margin: 64px 31px;
+    }
+    span{
+        font-size: 14px;
+    }
+    h2{
+        font-size: 34px;
+    }
+    .main-text p{
+        font-size: 16px;
+        max-width: 504px;
+    }
+    .main-content{
+        margin-bottom: 172px;
+    }
+    footer {
+        background-size: 112% 100%;
+    }
+    .footer-content{
+        display: flex;
+        flex-direction: column;
+        padding: 64px 128px;
+    }
+    footer h2{
+        max-width: 504px;
+        text-align: center;
+    }
+    footer p{
+        margin: 0;
+        max-width: 504px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 300;
+        margin: 24px auto;
+    }
+    .footer-content .download {
+        margin: 0 auto;
+    }
+    .inner-footer{
+        max-height: 320px;
+    }
+}

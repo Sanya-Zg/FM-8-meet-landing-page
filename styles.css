@@ -16,6 +16,7 @@ body{
     font-optical-sizing: auto;
     font-weight:400;
     font-style: normal;
+    /* overflow: hidden; */
 }
 .container{
     max-width: 1440px;
@@ -139,7 +140,7 @@ footer{
 .inner-footer{
     background-color: rgba(77, 150, 169, 90%);
     max-width: 1440px;
-    height: 312px;
+    height: 100%;
 }
 .number-sec-2 {
     width: 56px;
@@ -204,7 +205,7 @@ footer p{
     .icons-left{
         order: 1;
     }
-    .hero-content h1{
+    h1{
         font-size: 48px;
     }
     .hero-content p {
@@ -255,5 +256,66 @@ footer p{
     }
     .inner-footer{
         max-height: 320px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .icon-right, .icons-left{
+        max-width: 208px;
+        height: 160px;
+    }
+    header img{
+        width: 100%;
+    }
+    .icon-right{
+        margin-left: 17px;
+    }
+    .hero-content{
+        margin: 48px 32px 32px;
+    }
+    h1{
+        font-size: 40px;
+    }
+    .hero-content p {
+        font-size: 16px;
+    }
+    .hero-content .download{
+        margin: 0 0 16px;
+    }
+    .main-content{
+        margin: 32px 32px 172px;
+    }
+    .main-images{
+        margin: 64px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+    .main-images img {
+        max-width: 148px;
+        height: 144px;
+    }
+    span{
+        font-size: 12px;
+    }
+    .main-text h2{
+        font-size: 32px;
+        margin: 16px 0 32px;
+    }
+    .number-sec-2 {
+        left: 43%;
+    }
+    .footer-content{
+        padding: 64px 32px;
+    }
+    footer{
+        height: 374px;
+    }
+    .inner-footer h2{
+        font-size: 32px;
+        font-weight: 800;
+    }
+    .inner-footer p{
+        letter-spacing: 0.5px;
     }
 }
